@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "vazir";
+        font-display: swap;
+        src: local("data"), url("./fonts/ttf/Vazirmatn-Regular.ttf")
+    }
+
+    @font-face {
+        font-family: "vazir Bold";
+        font-display: swap;
+        src: local("data"), url("./fonts/ttf/Vazirmatn-Black.ttf")
+    }
+
+    @font-face {
+        font-family: "vazir ExtraBold";
+        font-display: swap;
+        src: local("data"), url("./fonts/ttf/Vazirmatn-ExtraBold.ttf")
+    }
+
+    @font-face {
+        font-family: "vazir Light";
+        font-display: swap;
+        src: local("data"), url("./fonts/ttf/Vazirmatn-Light.ttf")
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hover {
+    position: relative;
+  }
+ 
+  #hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+  }
+ 
+  #hover:hover::after {
+    transform: scaleX(1);
+  }

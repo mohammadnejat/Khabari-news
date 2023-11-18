@@ -1,0 +1,5 @@
+div:hover>#first {
+    opacity: 100%;
+    color: white;
+    z-index: 1000;
+}
