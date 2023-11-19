@@ -14,6 +14,7 @@ const Navbar = () => {
         setFixedNav(false);
     }
 };
+
 window.addEventListener('scroll', scrollHandler);
   return (
     <>
