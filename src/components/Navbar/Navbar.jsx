@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { AiOutlineDown, AiOutlineSearch } from 'react-icons/ai'
-import { IoIosArrowDown } from 'react-icons/io'
-import { FiArrowDown, FiMenu, FiX } from 'react-icons/fi'
-import Fade from 'react-reveal/Fade'
+import { FiMenu } from 'react-icons/fi'
 
 const Navbar = () => {
   const [isNav, setIsNav] = useState(false)
