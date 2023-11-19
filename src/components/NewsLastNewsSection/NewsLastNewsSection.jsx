@@ -16,12 +16,6 @@ import VideoSwiper from './VideoSwiper/VideoSwiper'
 import VideoSwiper2 from './VideoSwiper/VideoSwiper2'
 import VideoSwiper3 from './VideoSwiper/VideoSwiper3'
 import VideoSwiper4 from './VideoSwiper/VideoSwiper4'
-import img2 from "./../../../public/2.jpg"
-import img3 from "./../../../public/3.jpg"
-import img4 from "./../../../public/4.jpg"
-import img5 from "./../../../public/5.webp"
-import img6 from "./../../../public/6.webp"
-import img7 from "./../../../public/7.webp"
 import Text from '../TextAnimated/Text'
 import ImgInstagram from '../ImgComponent/ImgInstagram'
 import BoxIcons from '../BoxIcons/BoxIcons'
@@ -36,8 +30,8 @@ const NewsLastNewsSection = () => {
                     <div>
                         <Title title="جدیدترین خبرها" />
                         <div className='grid grid-cols-1 gap-4 pb-6 lg:grid-cols-8'>
-                            <div className='col-span-4'><NewsCards img={img2} /></div>
-                            <div className='col-span-4'><NewsCards img={img3} /></div>
+                            <div className='col-span-4'><NewsCards img="/public/2.jpg" /></div>
+                            <div className='col-span-4'><NewsCards img="/public/3.jpg" /></div>
                         </div>
                     </div>
                     <div className='grid grid-cols-1 gap-4 md:grid-cols-8 '>
@@ -110,7 +104,7 @@ const NewsLastNewsSection = () => {
                                         <ImgComp
                                             width="w-[122px]"
                                             height="h-[149px]"
-                                            img={img4} />
+                                            img="/public/4.jpg" />
                                     </div>
                                     <div className='w-full'>
                                         <TextAnimated
@@ -123,7 +117,7 @@ const NewsLastNewsSection = () => {
                                         <ImgComp
                                             width="w-[122px]"
                                             height="h-[149px]"
-                                            img={img5} />
+                                            img="/public/5.webp" />
                                     </div>
                                     <div>
                                         <TextAnimated
@@ -136,7 +130,7 @@ const NewsLastNewsSection = () => {
                                         <ImgComp
                                             width="w-[122px]"
                                             height="h-[149px]"
-                                            img={img6} />
+                                            img="/public/6.webp" />
                                     </div>
                                     <div>
                                         <TextAnimated
@@ -146,7 +140,7 @@ const NewsLastNewsSection = () => {
                                 </div>
                             </div>
                             <div>
-                                <ImgComp img={img7} />
+                                <ImgComp img="/public/7.webp" />
                                 <div className='pt-3 '>
                                     <span className='text-sm font-bold text-red-600'>سیاست</span>
                                 </div>

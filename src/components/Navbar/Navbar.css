@@ -12,3 +12,32 @@
       opacity: 1;
     }
   }
+
+  .upDown {
+    animation: fadeNav 0.5s ease-in ;
+  }
+
+  @keyframes fadeNav {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hide {
+    animation: hidden 0.5s ease-in forwards ;
+  }
+
+  @keyframes hidden {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      display: none;
+      transform: translateY(-40px);
+    }
+  }

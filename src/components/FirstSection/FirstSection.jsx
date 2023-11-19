@@ -1,7 +1,6 @@
 import React from 'react'
 import MainPageCards from '../mainPageCards/MainPageCards'
 import { TextAnimated } from '../TextAnimated/TextAnimated'
-import img1 from "./../../../public/1.jpg"
 
 
 const FirstSection = () => {
@@ -10,8 +9,8 @@ const FirstSection = () => {
             <div className="lg:w-[85%] md:w-[90%] w-[95%] mx-auto">
                 <div className="flex flex-col gap-4 md:grid md:grid-cols-12" id="">
                     <div className="flex flex-col items-center justify-center col-span-3 gap-4">
-                        <MainPageCards img={img1} project={"اخباری"} text="سخنرانی ویژه نخست وزیر در مورد وضعیت فعلی و هشدار ویروس کرونا" time={"21 دی 1401"} />
-                        <MainPageCards img={img1} project={"ورزشی"} text="سخنرانی ویژه نخست وزیر در مورد وضعیت فعلی و هشدار ویروس کرونا" time={"21 دی 1401"} />
+                        <MainPageCards img="/public/1.jpg" project={"اخباری"} text="سخنرانی ویژه نخست وزیر در مورد وضعیت فعلی و هشدار ویروس کرونا" time={"21 دی 1401"} />
+                        <MainPageCards img="/public/1.jpg" project={"ورزشی"} text="سخنرانی ویژه نخست وزیر در مورد وضعیت فعلی و هشدار ویروس کرونا" time={"21 دی 1401"} />
                     </div>
                     <div className="h-full col-span-6 border">
                         <div className="w-full h-full">
