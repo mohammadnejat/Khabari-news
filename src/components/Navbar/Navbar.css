@@ -20,24 +20,45 @@
   @keyframes fadeNav {
     from {
       opacity: 0;
+      display: none;
       transform: translateY(-40px);
     }
     to {
       opacity: 1;
+      
     }
   }
 
   .hide {
     animation: hidden 0.5s ease-in forwards ;
+    display: none;
   }
 
   @keyframes hidden {
     from {
       opacity: 1;
+      display: block;
     }
     to {
       opacity: 0;
       display: none;
       transform: translateY(-40px);
+    }
+  }
+
+
+  .hiddenNav {
+    animation: hiddenNavv 0.5s ease-in forwards ;
+  }
+
+  @keyframes hiddenNavv {
+    from {
+      opacity: 0;
+      display: none;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      display: block;
     }
   }

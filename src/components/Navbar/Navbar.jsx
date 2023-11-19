@@ -2,28 +2,25 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { AiOutlineDown, AiOutlineSearch } from 'react-icons/ai'
 import { IoIosArrowDown } from 'react-icons/io'
-import { FiArrowDown, FiMenu } from 'react-icons/fi'
+import { FiArrowDown, FiMenu, FiX } from 'react-icons/fi'
 import Fade from 'react-reveal/Fade'
+
 const Navbar = () => {
-  const [isShow, setIsShow] = useState(false)
   const [isNav, setIsNav] = useState(false)
   const [FixedNav, setFixedNav] = useState(false)
 
-  const ScrollHandler = () => {
-    if (window.scrollY >= 200) {
-      setFixedNav(true)
-    } else if (window.scrollY <= 149) {
-      setFixedNav(false)
+  const scrollHandler = () => {
+    if (window.scrollY >= 300.00) {
+        setFixedNav(true);
+    } else if (window.scrollY <= 30)  {
+        setFixedNav(false);
     }
-  }
-
-  window.addEventListener('scroll', ScrollHandler)
+};
+window.addEventListener('scroll', scrollHandler);
   return (
     <>
-      {FixedNav ? (
-        <Fade top>
           <section
-            className='fixed top-0 z-10 w-full h-fit'
+            className={`${FixedNav ? "fixed" : "block"} top-0 z-10 w-full h-fit ${FixedNav ? "hiddenNav" : ""}`}
             style={{ background: '#F6F6F6' }}
           >
             <div className='lg:w-[85%] md:w-[90%] w-[95%] mx-auto relative '>
@@ -33,35 +30,7 @@ const Navbar = () => {
                     شورای شاوور
                   </h1>
                 </div>
-                <div className='w-[60%] h-full lg:block hidden'></div>
-                <div className='relative'>
-                  <input
-                    type='search'
-                    placeholder='جستجو...'
-                    className='h-12 px-4 py-2 text-base duration-500 rounded-md outline-none focus:outline-red-600 outline-1'
-                    style={{ background: '#EEEEEE' }}
-                  />
-                  <button className='absolute p-2 text-white bg-red-600 rounded-md left-2 top-2 bottom-2'>
-                    <AiOutlineSearch />
-                  </button>
-                </div>
-                <div className='block lg:hidden'>
-                  <FiMenu className='text-3xl' />
-                </div>
-              </div>
-            </div>
-          </section>
-        </Fade>
-      ) : (
-        <section className='w-full h-fit' style={{ background: '#F6F6F6' }}>
-          <div className='lg:w-[85%] md:w-[90%] w-[95%] mx-auto relative'>
-            <div className='flex items-center justify-between '>
-              <div>
-                <h1 className='w-12 text-lg font-extrabold lg:text-4xl'>
-                  شورای شاوور
-                </h1>
-              </div>
-              <div className='w-[60%] h-full lg:block hidden'>
+                <div className='w-[60%] h-full lg:block hidden'>
                 <div className='flex'>
                   <div className='transition duration-500 cursor-pointer hover:bg-red-600 p-7'>
                     خانه
@@ -99,24 +68,23 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <div className='relative'>
-                <input
-                  type='search'
-                  placeholder='جستجو...'
-                  className='h-12 px-4 py-2 text-base duration-500 rounded-md outline-none focus:outline-red-600 outline-1'
-                  style={{ background: '#EEEEEE' }}
-                />
-                <button className='absolute p-2 text-white bg-red-600 rounded-md left-2 top-2 bottom-2'>
-                  <AiOutlineSearch />
-                </button>
-              </div>
-              <div className='block lg:hidden'>
-                <FiMenu className='text-3xl' />
+                <div className='relative'>
+                  <input
+                    type='search'
+                    placeholder='جستجو...'
+                    className='h-12 px-4 py-2 text-base duration-500 rounded-md outline-none focus:outline-red-600 outline-1'
+                    style={{ background: '#EEEEEE' }}
+                  />
+                  <button className='absolute p-2 text-white bg-red-600 rounded-md left-2 top-2 bottom-2'>
+                    <AiOutlineSearch />
+                  </button>
+                </div>
+                <div className='block lg:hidden'>
+                  <FiMenu className='text-3xl' />
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
     </>
   )
 }
